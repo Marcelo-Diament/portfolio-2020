@@ -13,3 +13,26 @@ ul {
     list-style: none;
 }
 /* /RESET */
+
+/* GRID (MACRO STRUCTURE) */
+body {
+    display: grid;
+    grid-gap: 20px; /* Short-hand para grid-column-gap e grid-row-gap*/
+}
+header {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+aside {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+main {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+footer {
+    grid-column-start: 1;
+    grid-column-end: 43;
+}
+/* /GRID (MACRO STRUCTURE) */
