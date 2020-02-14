@@ -18,22 +18,22 @@ ul {
 body {
     display: grid;
     grid-gap: 20px; /* Short-hand para grid-column-gap e grid-row-gap*/
-    grid-template-columns: 20% auto auto auto;
+    grid-template-columns: 20% auto;
     grid-template-rows: 220px auto 80px;
     align-content: space-between;
 }
 header {
-    grid-area: 1 / 1 / span 4 / span 4;
+    grid-area: 1 / 1 / 1 / span 3;
 }
 aside {
     grid-area: 2 / 1 / 2 / 2;
 }
 main {
-    grid-area: 2 / 2 / span 4 / 2;
+    grid-area: 2 / 2 / 2 / 2;
 }
 footer {
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 3;
 }
 /* /GRID (MACRO STRUCTURE) */
 
@@ -44,11 +44,22 @@ header div {
     justify-content: space-between;
     align-items: center;
 }
+header div h1 {
+    flex: 1 0 100%;
+}
+header div img {
+    flex: 0 1 80px;
+}
+header div ul {
+    flex: 0 1 auto;
+    align-self: flex-start;
+}
 aside {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: stretch;
+    overflow-x: hidden; /* Esconde o que sobra das imagens */
 }
 main {
     display: flex;
@@ -57,10 +68,31 @@ main {
     align-items: stretch;
 }
 main section {
+    flex: 0 1 auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: stretch;
+}
+main section:last-child {
+    flex-flow: column nowrap;
+}
+main section h3 {
+    flex: 1 1 100%;
+}
+main section article {
+    flex: 1 1 50%;
+}
+main section:last-child h3 {
+    flex: 1 1 auto;
+}
+main section:last-child div {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row nowrap;
+}
+main section:last-child div article {
+    flex: 0 1 30%;
 }
 footer {
     display: block; /* Nesse caso não há necessidade de usarmos flexbox */
