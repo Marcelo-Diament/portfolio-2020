@@ -19,20 +19,17 @@ body {
     display: grid;
     grid-gap: 20px; /* Short-hand para grid-column-gap e grid-row-gap*/
     grid-template-columns: 20% auto auto auto;
-    grid-template-rows: 120px auto 80px;
+    grid-template-rows: 220px auto 80px;
     align-content: space-between;
 }
 header {
-    grid-column-start: 1;
-    grid-column-end: 4;
+    grid-area: 1 / 1 / span 4 / span 4;
 }
 aside {
-    grid-column-start: 1;
-    grid-column-end: 2;
+    grid-area: 2 / 1 / 2 / 2;
 }
 main {
-    grid-column-start: 2;
-    grid-column-end: 4;
+    grid-area: 2 / 2 / span 4 / 2;
 }
 footer {
     grid-column-start: 1;
