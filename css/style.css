@@ -18,6 +18,9 @@ ul {
 body {
     display: grid;
     grid-gap: 20px; /* Short-hand para grid-column-gap e grid-row-gap*/
+    grid-template-columns: 20% auto auto auto;
+    grid-template-rows: 120px auto 80px;
+    align-content: space-between;
 }
 header {
     grid-column-start: 1;
@@ -33,6 +36,6 @@ main {
 }
 footer {
     grid-column-start: 1;
-    grid-column-end: 43;
+    grid-column-end: 4;
 }
 /* /GRID (MACRO STRUCTURE) */
