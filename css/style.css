@@ -36,3 +36,33 @@ footer {
     grid-column-end: 4;
 }
 /* /GRID (MACRO STRUCTURE) */
+
+/* FLEXBOX (MICRO STRUCTURE) */
+header div {
+    display: flex;
+    flex-flow: row wrap; /* Short-hand para flex-direction e flex-wrap */
+    justify-content: space-between;
+    align-items: center;
+}
+aside {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+main section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+footer {
+    display: block; /* Nesse caso não há necessidade de usarmos flexbox */
+}
+/* /FLEXBOX (MICRO STRUCTURE) */
