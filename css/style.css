@@ -105,8 +105,10 @@ footer {
 
 /* LAYOUT STYLE */
 header {
-    padding: 20px;
-    filter: drop-shadow(0 2px 2px rgb(0, 0, 0, .25)); /* Quando usamos números decimais com o número inteiro 0, não é necessário declarar o 0 */
+    background-color: rgb(27, 96, 141);
+    color: white;
+    padding: 10px 20px 40px 20px;
+    filter: drop-shadow(0 2px 4px rgb(0, 0, 0, .9)); /* Quando usamos números decimais com o número inteiro 0, não é necessário declarar o 0 */
 }
 header h1 {
     text-align: center;
@@ -124,12 +126,17 @@ aside {
 aside h2 {
     padding: 20px;
 }
-aside h3,
+aside h3 {
+    font-size: 20px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
 aside p {
+    font-size: 18px;
     padding: 0 20px;
 }
 aside div:nth-child(even) {
-    max-height: 100vh;
+    max-height: calc(100vh + 10px);
     overflow-y: scroll; 
     margin: 20px auto;
 }
@@ -154,9 +161,11 @@ main h2,
 main h3 {
     color: rgb(27, 96, 141);
     font-weight: bolder;
-    font-size: 1.2em;
     text-align: center;
     padding: 20px;
+}
+main h3 {
+    font-size: 1.2em;
 }
 main article {
     padding: 20px;
